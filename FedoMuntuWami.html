@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fedo Sthandwa Sami</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffe0ec, #d3f4ff);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+      background: transparent;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      color: #ff4d6d;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    .apology {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      line-height: 1.7;
+    }
+    .apology h2 {
+      text-align: center;
+      color: #ff4d6d;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem;
+    }
+    .gallery img {
+      width: 180px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .video {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 3rem 1rem;
+    }
+    .video video {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .surprise {
+      text-align: center;
+      margin: 3rem 1rem;
+    }
+    .surprise button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .surprise button:hover {
+      background-color: #ff3355;
+    }
+  </style>
+</head>
+<body>
+  <header>Fedo Sthandwa Sami 💗</header>
+
+  <section class="apology">
+    <h2>From Me, To You</h2>
+    <p>
+      I know I crossed a line. What I did wasn’t cool, and it hurt you — and that breaks me inside.
+      You are truly the most beautiful person I’ve ever met — inside and out. The way you smile, the way you carry yourself,
+      the way your presence just lights up everything around you... it's something I’ll never take for granted.
+    </p>
+    <p>
+      I want you to know something very important: <strong>you don’t ever have to change</strong> — not for anyone, not even for me.
+      You are perfect exactly the way you are. And I love you for all of it. This page, these words, this space — it’s all for you.
+      I'm sorry, and I love you. 💖
+    </p>
+  </section>
+
+  <section class="gallery">
+    <img src="1.jpg" alt="Her Pic 1">
+    <img src="2.jpg" alt="Her Pic 2">
+    <img src="3.jpg" alt="Her Pic 3">
+  </section>
+
+  <section class="video">
+    <h2>A Little Something From Me</h2>
+    <video controls>
+      <source src="apology-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="surprise">
+    <h2>Click for a Surprise</h2>
+    <button onclick="showHearts()">💖 Click Me 💖</button>
+  </section>
+
+  <script>
+    function showHearts() {
+      for (let i = 0; i < 50; i++) {
+        const heart = document.createElement('div');
+        heart.textContent = '💖';
+        heart.style.position = 'fixed';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.top = Math.random() * 100 + 'vh';
+        heart.style.fontSize = '2rem';
+        heart.style.animation = 'fade 3s forwards';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 3000);
+      }
+    }
+  </script>
+</body>
+</html>
